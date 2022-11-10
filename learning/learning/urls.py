@@ -15,7 +15,19 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from learning import views # import views from learning app
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('about-us/', views.aboutUS, name='about-us'), # add about-us path
+    path('contact-us/', views.contactUS, name='contact-us'), # add contact-us path
+
+    # dynamic url
+    path('dynamic/<str:my_name>/', views.dynamic, name='dynamic'), # add dynamic path
+    #dynamic url with slug
+    path('dynamic-slug/<slug:my_slug>/', views.dynamic_slug, name='dynamic-slug'), # add dynamic-slug path
+    #dynamic url with int
+    path('dynamic-int/<int:my_int>/', views.dynamic_int, name='dynamic-int'), # add dynamic-int path
+    #dynamic url with unknown type
+    path('dynamic-auto/<auto>/', views.dynamic_auto, name='dynamic-auto'), # add dynamic-auto path
 ]
