@@ -36,4 +36,9 @@
     
     python manage.py migrate
 
-## **Create Django App**
+## **SUPERUSER**
+
+### Create Superuser
+
+    python manage.py createsuperuser
+
