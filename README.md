@@ -25,3 +25,15 @@
 ## **Run Django Project**
 
     python manage.py runserver
+
+## **Django Migrations**
+
+### Create Migrations
+
+    python manage.py makemigrations
+
+### Apply Migrations
+    
+    python manage.py migrate
+
+## **Create Django App**
