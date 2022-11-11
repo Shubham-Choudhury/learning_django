@@ -106,3 +106,16 @@ def url_2(request):
 
 def url_3(request):
     return render(request, 'urls/url_3.html')
+
+
+# Django Forms
+def form(request):
+    if request.method == 'POST':
+        name = request.POST.get('name')
+        email = request.POST.get('email')
+        data = {
+            'name': name,
+            'email': email,
+        }
+        return render(request, 'form/index.html', data)
+    return render(request, 'form/index.html')

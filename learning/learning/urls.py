@@ -56,4 +56,8 @@ urlpatterns = [
     path('url-1/', views.url_1, name='url-1'),
     path('url-2/', views.url_2, name='url-2'),
     path('url-3/', views.url_3, name='url-3'),
+
+
+    # Django Forms
+    path('form/', views.form, name='form'),
 ]
