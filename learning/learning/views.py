@@ -63,3 +63,8 @@ def django_template_program(request):
         ],
     }
     return render(request, 'django_template_program.html', data)
+
+
+# Get Static Files
+def get_static_files(request):
+    return render(request, 'get_static_files.html')

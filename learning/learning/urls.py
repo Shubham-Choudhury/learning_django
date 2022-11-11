@@ -39,4 +39,8 @@ urlpatterns = [
 
     # Django Template Programming
     path('django-template-program/', views.django_template_program, name='django-template-program'), 
+
+
+    # Get Static Files
+    path('get-static-files/', views.get_static_files, name='get-static-files'),
 ]
