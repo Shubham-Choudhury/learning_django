@@ -18,16 +18,25 @@ from django.urls import path
 from learning import views # import views from learning app
 
 urlpatterns = [
+    path('', views.home, name='home'),
+
+
     path('admin/', admin.site.urls),
     path('about-us/', views.aboutUS, name='about-us'), # add about-us path
     path('contact-us/', views.contactUS, name='contact-us'), # add contact-us path
 
     # dynamic url
-    path('dynamic/<str:my_name>/', views.dynamic, name='dynamic'), # add dynamic path
+    path('dynamic/<str:my_name>/', views.dynamic, name='dynamic'), 
     #dynamic url with slug
-    path('dynamic-slug/<slug:my_slug>/', views.dynamic_slug, name='dynamic-slug'), # add dynamic-slug path
+    path('dynamic-slug/<slug:my_slug>/', views.dynamic_slug, name='dynamic-slug'), 
     #dynamic url with int
-    path('dynamic-int/<int:my_int>/', views.dynamic_int, name='dynamic-int'), # add dynamic-int path
+    path('dynamic-int/<int:my_int>/', views.dynamic_int, name='dynamic-int'), 
     #dynamic url with unknown type
-    path('dynamic-auto/<auto>/', views.dynamic_auto, name='dynamic-auto'), # add dynamic-auto path
+    path('dynamic-auto/<auto>/', views.dynamic_auto, name='dynamic-auto'), 
+
+    # pass data to template
+    path('pass-data/', views.pass_data, name='pass-data'), 
+
+    # Django Template Programming
+    path('django-template-program/', views.django_template_program, name='django-template-program'), 
 ]

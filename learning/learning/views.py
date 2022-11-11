@@ -1,5 +1,16 @@
 from django.http import HttpResponse  # import HttpResponse for text response
+from django.shortcuts import render  # Render Template
 
+#import datetime for current date
+from datetime import datetime
+
+
+# Render Template
+def home(request):
+    return render(request, 'index.html')
+
+
+# Render Text Response
 def aboutUS(request):
     return HttpResponse('<center><h1>Welcome to the about us page</h1></center>')
 
@@ -23,3 +34,32 @@ def dynamic_int(request, my_int):
 def dynamic_auto(request, auto):
     # print(type(my_auto))
     return HttpResponse(f'<center><h1>Hello \"{auto}\"</h1></center>')
+
+
+# pass data to template
+def pass_data(request):
+    my_list = [1, 2, 3, 4, 5]
+    current_date = datetime.now()
+    data = {
+        'title': 'Pass Data To Template',
+        'my_list': my_list,
+        'current_date': current_date,
+    }
+    return render(request, 'pass_data.html', data)
+
+
+# Django Template Programming
+def django_template_program(request):
+    friends = ['Nag', 'Avijit', 'Rahul', 'Sidda']
+    data = {
+        'friends': friends,
+        'age': 17,
+        'count': 5,
+        'student_details': [
+            {'name': 'Nag', 'age': 17, 'marks': 80},
+            {'name': 'Avijit', 'age': 17, 'marks': 90},
+            {'name': 'Rahul', 'age': 17, 'marks': 70},
+            {'name': 'Sidda', 'age': 17, 'marks': 60},
+        ],
+    }
+    return render(request, 'django_template_program.html', data)
