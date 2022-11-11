@@ -43,4 +43,11 @@ urlpatterns = [
 
     # Get Static Files
     path('get-static-files/', views.get_static_files, name='get-static-files'),
+
+
+    # Django Template Inheritance
+    path('template-1/', views.template_1, name='template-1'),
+    path('template-2/', views.template_2, name='template-2'),
+    path('template-3/', views.template_3, name='template-3'),
+    path('template-4/', views.template_4, name='template-4'),
 ]

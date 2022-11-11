@@ -68,3 +68,29 @@ def django_template_program(request):
 # Get Static Files
 def get_static_files(request):
     return render(request, 'get_static_files.html')
+
+
+# Django Template Inheritance
+def template_1(request):
+    data = {
+        'title': 'Template - 1',
+    }
+    return render(request, 'template_1.html', data)
+
+def template_2(request):
+    data = {
+        'title': 'Template - 2',
+    }
+    return render(request, 'template_2.html', data)
+
+def template_3(request):
+    data = {
+        'title': 'Template - 3',
+    }
+    return render(request, 'template_3.html', data)
+
+def template_4(request):
+    data = {
+        'title': 'Template - 4',
+    }
+    return render(request, 'template_4.html', data)
