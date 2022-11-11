@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Url - 2</title>
+    <style>
+        body{
+            background-color: #f5f5f5;
+        }
+        main{
+            background-color: #fff;
+            margin: 0 auto;
+            width: 50%;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        main a{
+            text-decoration: none;
+            color: #000;
+            font-size: 20px;
+            font-weight: 600;
+            padding: 10px;
+            border-radius: 10px;
+            background-color: #f5f5f5;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <header>
+            <h1>My URLs</h1>
+        </header>
+        <main>
+            <div>
+                <a href="{% url 'url-1' %}">Url - 1</a>
+            </div>
+
+            <div>
+                <a href="{% url 'url-2' %}">Url - 2</a>
+            </div>
+
+            <div>
+                <a href="{% url 'url-3' %}">Url - 3</a>
+            </div>
+        </main>
+    </center>
+</body>
+</html>

@@ -94,3 +94,15 @@ def template_4(request):
         'title': 'Template - 4',
     }
     return render(request, 'template_4.html', data)
+
+
+
+# Django Urls
+def url_1(request):
+    return render(request, 'urls/url_1.html')
+
+def url_2(request):
+    return render(request, 'urls/url_2.html')
+
+def url_3(request):
+    return render(request, 'urls/url_3.html')

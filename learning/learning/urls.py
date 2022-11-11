@@ -50,4 +50,10 @@ urlpatterns = [
     path('template-2/', views.template_2, name='template-2'),
     path('template-3/', views.template_3, name='template-3'),
     path('template-4/', views.template_4, name='template-4'),
+
+
+    # Django Urls
+    path('url-1/', views.url_1, name='url-1'),
+    path('url-2/', views.url_2, name='url-2'),
+    path('url-3/', views.url_3, name='url-3'),
 ]
